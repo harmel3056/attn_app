@@ -229,7 +229,7 @@ fun DailyBriefingCard(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.brain_icon),
+                        painter = painterResource(id = R.drawable.brain_logo),
                         contentDescription = "Significance",
                         modifier = Modifier.size(80.dp),
                         colorFilter = ColorFilter.tint(significanceColor, BlendMode.SrcIn)

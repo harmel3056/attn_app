@@ -25,7 +25,6 @@ import androidx.core.app.ActivityCompat
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import android.util.Log
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -46,9 +45,6 @@ class MainActivity : ComponentActivity() {
                 0
             )
         }
-
-        Log.d("WorkManagerScheduler", "Calling scheduleDailyFetch from MainActivity")
-        WorkManagerScheduler.scheduleDailyFetch(this)
 
         enableEdgeToEdge()
         setContent {

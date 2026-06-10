@@ -10,6 +10,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.attention.MainActivity
 import com.attention.data.entity.DailyBriefingEntity
+import com.attention.R
 
 object NotificationHelper {
     const val CHANNEL_ID = "daily_briefing"
@@ -29,8 +30,8 @@ object NotificationHelper {
         val firstSentence = briefing.briefingText.split(".").firstOrNull()?.trim() ?: ""
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
-            .setContentTitle("Attention — your morning briefing is ready")
+            .setSmallIcon(R.drawable.ic_notification_brain)
+            .setContentTitle("Attn: your morning briefing is ready")
             .setContentText(firstSentence)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setContentIntent(pendingIntent)
